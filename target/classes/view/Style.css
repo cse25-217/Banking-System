@@ -1,0 +1,188 @@
+
+/* =========================================
+   NOVA BANK - LOGIN PAGE THEME
+   Warm, Premium & Professional
+   ========================================= */
+
+/* MAIN ROOT */
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #F8F4EF;
+}
+
+/* LEFT WELCOME PANEL */
+.sidebar {
+    -fx-background-color: linear-gradient(
+        to bottom right,
+        #35251F,
+        #241B18,
+        #493126
+    );
+    -fx-padding: 45px;
+}
+
+/* BANK BRAND */
+.brand-title {
+    -fx-text-fill: #D89A62;
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+}
+
+/* WELCOME HEADING */
+.welcome-heading {
+    -fx-text-fill: #FFF8F1;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+/* WELCOME DESCRIPTION */
+.welcome-description {
+    -fx-text-fill: #D8C5B8;
+    -fx-font-size: 15px;
+    -fx-line-spacing: 6px;
+}
+
+/* LOGIN FORM CONTAINER */
+.login-container {
+    -fx-background-color: #F8F4EF;
+    -fx-padding: 50px;
+}
+
+/* FORM TITLE */
+.login-heading {
+    -fx-text-fill: #33251F;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+/* FORM SUBTITLE */
+.login-subtitle {
+    -fx-text-fill: #927F73;
+    -fx-font-size: 14px;
+}
+
+/* FIELD LABELS */
+.field-label {
+    -fx-text-fill: #49352C;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* USERNAME AND PASSWORD FIELDS */
+.text-field,
+.password-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-border-color: #E7D9CE;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-padding: 13px 15px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #33251F;
+    -fx-prompt-text-fill: #B3A49A;
+}
+
+/* INPUT HOVER EFFECT */
+.text-field:hover,
+.password-field:hover {
+    -fx-border-color: #D89A62;
+    -fx-background-color: #FFFEFC;
+}
+
+/* INPUT FOCUS EFFECT */
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #B86E45;
+    -fx-border-width: 1.8px;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(
+        gaussian,
+        #B86E4530,
+        9,
+        0.2,
+        0,
+        2
+    );
+}
+
+/* SIGN IN BUTTON */
+.primary-button {
+    -fx-background-color: linear-gradient(
+        to right,
+        #C27B4E,
+        #A85F3C
+    );
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 13px;
+}
+
+/* SIGN IN HOVER */
+.primary-button:hover {
+    -fx-background-color: linear-gradient(
+        to right,
+        #D18B5C,
+        #B86E45
+    );
+    -fx-effect: dropshadow(
+        gaussian,
+        #B86E4545,
+        12,
+        0.2,
+        0,
+        4
+    );
+}
+
+/* SIGN IN PRESSED */
+.primary-button:pressed {
+    -fx-background-color: #965637;
+    -fx-translate-y: 1px;
+}
+
+/* EXIT BUTTON */
+.secondary-button {
+    -fx-background-color: #F0E2D7;
+    -fx-text-fill: #75452E;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-border-color: #E6D3C4;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 12px;
+}
+
+/* EXIT HOVER */
+.secondary-button:hover {
+    -fx-background-color: #E8D2C1;
+    -fx-border-color: #D89A62;
+}
+
+/* EXIT PRESSED */
+.secondary-button:pressed {
+    -fx-background-color: #DEC2AD;
+    -fx-translate-y: 1px;
+}
+
+/* ERROR MESSAGE */
+.error-label {
+    -fx-text-fill: #B84C3A;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* FOOTER */
+.footer-label {
+    -fx-text-fill: #A39489;
+    -fx-font-size: 11px;
+}
+
+/* GENERAL LABELS */
+.label {
+    -fx-font-family: "Segoe UI";
+}

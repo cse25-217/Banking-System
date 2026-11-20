@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.TransactionsController">
+
+    <center>
+        <VBox spacing="18.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <children>
+
+                <Button text="← Back to Dashboard"
+                        onAction="#handleBackToDashboard"/>
+
+                <Label text="Transaction History"
+                       style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+                <ComboBox fx:id="transactionTypeComboBox"
+                          promptText="All Transaction Types"
+                          maxWidth="250.0"/>
+
+                <DatePicker fx:id="startDatePicker"
+                            promptText="Start Date"/>
+
+                <DatePicker fx:id="endDatePicker"
+                            promptText="End Date"/>
+
+                <Label fx:id="messageLabel"/>
+
+                <Button text="Search"
+                        onAction="#handleSearch"/>
+
+                <TableView fx:id="transactionsTable"
+                           prefHeight="400.0">
+                    <columns>
+                        <TableColumn fx:id="transactionIdColumn"
+                                     text="Transaction ID"
+                                     prefWidth="120.0"/>
+                        <TableColumn fx:id="accountNumberColumn"
+                                     text="Account Number"
+                                     prefWidth="140.0"/>
+                        <TableColumn fx:id="transactionTypeColumn"
+                                     text="Transaction Type"
+                                     prefWidth="140.0"/>
+                        <TableColumn fx:id="amountColumn"
+                                     text="Amount (BWP)"
+                                     prefWidth="130.0"/>
+                        <TableColumn fx:id="descriptionColumn"
+                                     text="Description"
+                                     prefWidth="160.0"/>
+                        <TableColumn fx:id="dateColumn"
+                                     text="Date"
+                                     prefWidth="140.0"/>
+                    </columns>
+                </TableView>
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

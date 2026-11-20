@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1100.0"
+            style="-fx-background-color: #f8f4ef;"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.OpenAccountController">
+
+    <center>
+        <VBox spacing="16.0" maxWidth="650.0"
+              BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <children>
+
+                <Button text="← Back to Dashboard"
+                        onAction="#handleBackToDashboard"/>
+
+                <Label text="Open a New Account"/>
+
+                <Label text="Select Account Type"/>
+                <ComboBox fx:id="accountTypeComboBox"
+                          promptText="Select Account Type"
+                          maxWidth="Infinity"/>
+
+                <Label text="Initial Deposit (BWP)"/>
+                <TextField fx:id="initialDepositField"
+                           promptText="Enter initial deposit"/>
+
+                <Label text="Branch"/>
+                <TextField fx:id="branchField"
+                           promptText="Enter branch"/>
+
+                <CheckBox fx:id="employedCheckBox"
+                          text="I am currently employed"
+                          onAction="#handleEmploymentChange"/>
+
+                <Label text="Employer Name"/>
+                <TextField fx:id="employerNameField"
+                           promptText="Enter employer name"
+                           disable="true"/>
+
+                <Label text="Employer Address"/>
+                <TextField fx:id="employerAddressField"
+                           promptText="Enter employer address"
+                           disable="true"/>
+
+                <Label fx:id="messageLabel"/>
+
+                <Button text="Open Account"
+                        onAction="#handleOpenAccount"/>
+
+                <Button text="Cancel"
+                        onAction="#handleCancel"/>
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

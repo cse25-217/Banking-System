@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.MyAccountsController">
+
+    <center>
+        <VBox spacing="18.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <children>
+
+                <Button text="← Back to Dashboard"
+                        onAction="#handleBackToDashboard"/>
+
+                <Label text="My Accounts"
+                       style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+                <TableView fx:id="accountsTable"
+                           prefHeight="400.0"
+                           prefWidth="950.0">
+                    <columns>
+                        <TableColumn fx:id="accountNumberColumn"
+                                     text="Account Number"
+                                     prefWidth="160.0"/>
+                        <TableColumn fx:id="accountTypeColumn"
+                                     text="Account Type"
+                                     prefWidth="150.0"/>
+                        <TableColumn fx:id="balanceColumn"
+                                     text="Balance (BWP)"
+                                     prefWidth="150.0"/>
+                        <TableColumn fx:id="branchColumn"
+                                     text="Branch"
+                                     prefWidth="130.0"/>
+                        <TableColumn fx:id="openingDateColumn"
+                                     text="Opening Date"
+                                     prefWidth="150.0"/>
+                    </columns>
+                </TableView>
+
+                <HBox spacing="15.0">
+                    <children>
+                        <Button text="Open New Account"
+                                onAction="#handleOpenAccount"/>
+                        <Button text="Refresh Accounts"
+                                onAction="#handleRefreshAccounts"/>
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.WithdrawController">
+
+    <center>
+        <VBox spacing="18.0" maxWidth="600.0"
+              BorderPane.alignment="CENTER">
+
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <children>
+
+                <Button text="← Back to Dashboard"
+                        onAction="#handleBackToDashboard"/>
+
+                <Label text="Withdraw Funds"
+                       style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #241b18;"/>
+
+                <Label text="Select Account"/>
+                <ComboBox fx:id="accountComboBox"
+                          promptText="Choose eligible account"
+                          maxWidth="Infinity"/>
+
+                <Label text="Account Number"/>
+                <TextField fx:id="accountNumberField"
+                           promptText="Account number"
+                           editable="false"/>
+
+                <Label text="Withdraw Amount (BWP)"/>
+                <TextField fx:id="amountField"
+                           promptText="Enter amount"/>
+
+                <Label text="Reference"/>
+                <TextField fx:id="referenceField"
+                           promptText="Enter reference"/>
+
+                <Label fx:id="messageLabel"
+                       wrapText="true"/>
+
+                <Button text="Confirm Withdrawal"
+                        onAction="#handleConfirmWithdrawal"/>
+
+                <Button text="Cancel"
+                        onAction="#handleCancel"/>
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.ProfileController">
+
+    <center>
+        <VBox spacing="15.0" maxWidth="600.0"
+              BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <children>
+
+                <Button text="← Back to Dashboard"
+                        onAction="#handleBackToDashboard"/>
+
+                <Label text="My Profile"
+                       style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+                <Label text="Customer ID"/>
+                <TextField fx:id="customerIdField"
+                           promptText="Customer ID"
+                           editable="false"/>
+
+                <Label text="First Name"/>
+                <TextField fx:id="firstNameField"
+                           promptText="First Name"/>
+
+                <Label text="Surname"/>
+                <TextField fx:id="surnameField"
+                           promptText="Surname"/>
+
+                <Label text="Residential Address"/>
+                <TextField fx:id="addressField"
+                           promptText="Address"/>
+
+                <Label text="Phone Number"/>
+                <TextField fx:id="phoneNumberField"
+                           promptText="Phone Number"/>
+
+                <Label text="Email Address"/>
+                <TextField fx:id="emailField"
+                           promptText="Email Address"/>
+
+                <Label fx:id="messageLabel"
+                       wrapText="true"/>
+
+                <Button text="Update Profile"
+                        onAction="#handleUpdateProfile"/>
+
+                <Button text="Cancel"
+                        onAction="#handleCancel"/>
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
